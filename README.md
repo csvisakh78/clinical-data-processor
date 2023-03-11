@@ -10,10 +10,11 @@ Express Api service to consume payload from patient device and process the data 
 # Prerequisites & Installation Setup
 
 - Clone the repo
-- Checkout to `master` branch
+- Checkout to `main` branch
+- cd to project folder `cd clinical-data-processor`
 - Run `npm install` to install the needed node modules
 - Create a `.env` file by referrring .env.example and replace the dummy config values with your local postgres db values
-- Create a new database in postgresql by running `create database clinical_metrics`
+- Create a new database in postgresql server by running `create database clinical_metrics`
 
 # Enviroment Variables
 
@@ -24,7 +25,7 @@ Express Api service to consume payload from patient device and process the data 
 
 # Run/Start Service
 
-Run this command from project directory `npm start`
+Run `npm start` to make the service up
 
 # Developer Notes
 
