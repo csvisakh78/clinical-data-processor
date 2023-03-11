@@ -1,11 +1,12 @@
 # Introduction
 
-Express Api service to consume payload from patient device and process the data to calculate the heart rate high/low value for 15 minutes interval and return processed date with raw data recieved
+Express Api service to consume payload from patient device and process the data to calculate the heart rate high/low value for 15 minutes interval and store the payload to postgres db and then return the processed date with raw data recieved
 
 # Requirements
 
 - Node.js (>= v16.0.0)
 - Npm (>= v7.0.0)
+- PostgreSQL
 
 # Prerequisites & Installation Setup
 
