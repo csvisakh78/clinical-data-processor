@@ -10,7 +10,7 @@ sequelize
     logger.info("Connection has been established successfully.");
   })
   .catch((err) => {
-    logger.error("DB connection error", err);
+    logger.error("DB connection error : ", err);
   });
 
 module.exports = sequelize;

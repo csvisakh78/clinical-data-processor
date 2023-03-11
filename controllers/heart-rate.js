@@ -1,6 +1,7 @@
 const moment = require("moment");
 const { MetricsPayload } = require("../models");
 const { validationResult } = require("express-validator");
+const logger = require("../logger");
 
 /**
  * Process the payload from patient device and calculate heart rate for 15 mins interval
@@ -15,6 +16,7 @@ const processHeartRatePayload = async (req, res) => {
     if (errors && errors.length) {
       throw errors;
     }
+
     const payload = req.body;
     const heartRates = payload.clinical_data.HEART_RATE.data || [];
 
@@ -73,6 +75,7 @@ const processHeartRatePayload = async (req, res) => {
       rawData: payload.clinical_data,
     });
   } catch (err) {
+    logger.error("Payload api error : ", err);
     res.status(400).json({
       success: false,
       message: err?.message,
